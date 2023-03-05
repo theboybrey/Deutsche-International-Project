@@ -170,12 +170,12 @@ const LandingPage = () => {
           </div>
 
           <div className="alumni-text-section">
-            <p className='mb-4'>Enroll your ward to join <br />
+            <p className='mb-4 enroll-ads'>Enroll your ward to join <br />
               over 3000+ successful students</p>
 
             {/* Join Us Button */}
 
-            <div className="btn justify-center mb">
+            <div className="btn justify-center mb ">
               <Link to={'/login'} className="bg-black text-white py-3 px-5 flex gap-2">Enroll Your Ward Now
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />

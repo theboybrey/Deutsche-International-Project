@@ -32,13 +32,13 @@ header {
 
 /* Animation to make the Text Appear*/
 @keyframes slide-in-from-top {
-    0% {
-      transform: translateY(-100%);
-    }
-    100% {
-      transform: translateY(0);
-    }
+  0% {
+    transform: translateY(-100%);
   }
+  100% {
+    transform: translateY(0);
+  }
+}
 
 .hero-caption,
 .news-caption {
@@ -399,7 +399,7 @@ header {
     transform: scaleX(2rem);
     transition: ease-in-out cubic-bezier(0.175, 0.885, 0.32, 1.275);
     animation-name: slide-in-from-top;
-    animation-duration: .9s;
+    animation-duration: 0.9s;
     animation-fill-mode: forwards;
   }
 
@@ -412,65 +412,122 @@ header {
     }
   }
 
-    .hero-caption, .news-caption{
-        font-size: 22px;
-    }
+  .hero-caption,
+  .news-caption {
+    font-size: 22px;
+  }
 
-    /* Course Section */
-    .courses-section{
-        display: flex !important;
-        flex-direction: column !important;
-        padding: 0 2rem;
-        margin-top: -2rem;
-    }
+  /* Course Section */
+  .courses-section {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 2rem;
+    margin-top: -2rem;
+  }
 
-    .first-course, .second-course {
-        border-bottom: 2px solid #eee !important; 
-    }
+  .first-course,
+  .second-course {
+    border-bottom: 2px solid #eee !important;
+  }
 
-    /* News Section */
-    .news-section{
-        flex-direction: column;
-        padding: 0 4rem !important;
-        gap: 2rem !important;
-    }
+  /* News Section */
+  .news-section {
+    flex-direction: column;
+    padding: 0 4rem !important;
+    gap: 2rem !important;
+  }
 
+  .news-img {
+    height: 320px;
+    width: 350px;
+  }
 
-    .news-img{
-        height: 320px;
-        width: 350px;
-    }
+  .news-img-caption {
+    top: 85%;
+  }
 
-    .news-img-caption{
-        top: 85%;
-    }
+  .news-first,
+  .news-sec,
+  .news-third {
+    background-size: cover;
+    box-shadow: inset 0 10px 200px #000;
+  }
 
-    .news-first ,.news-sec ,
-    .news-third {
-        background-size: cover;
-        box-shadow: inset 0 10px 200px #000;
-      }
+  /* Acknowledgement Section */
+  .ack-text {
+    font-size: 18px;
+  }
 
+  .ack-img {
+    width: 30%;
+    background-repeat: no-repeat;
+  }
 
-      /* Acknowledgement Section */
-      .ack-text{
-        font-size: 18px; 
-      }
+  .readMoreBtn {
+    margin-top: 1rem !important;
+  }
 
-      .ack-img{
-        width: 30%;
-        background-repeat: no-repeat;
-      }
+  /* School Stats */
+  .school-stats {
+    width: 101vw;
+    margin: 0 -18px !important;
+    justify-content: center;
+    align-items: left;
+    padding: 1rem !important;
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+  }
 
-      .readMoreBtn{
-        margin-top: 1rem !important;
-      }
+  .school-ads {
+    font-weight: 600;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'DM Sans';
+  }
 
+  .stats {
+    margin: 0 !important;
+    font-weight: 500;
+  }
 
-      /* School Stats */
+  
+  .enrolled-students h2,
+  .number-of-staff h2,
+  .global-alumni h2 {
+    font-size: 18px !important;
+    font-family: "Sora";
+    font-weight: bold;
+  }
+
+  .alumni-images img{
+    width: 100vw;
+    height: 470px;
+    justify-content: center;
+    display: none;
+    align-items: center;
+    margin-left: 1rem;
+  }
+
+  .alumni-text-section{
+    display: flex;
+    flex-direction: column;
+    top: 10%;
+    height: 400px; 
+    justify-content: center;
+    align-items: center;
+  }
+
+  .alumni-text-section .enroll-ads{
+    font-size: 18px;
+    /* position: absolute; */
+    width: 100vw !important;
+    text-align: center !important;
+    
+  }
+
 
 }
-
 
 /* Tablets */
 @media screen and (min-width: 640px) and (max-width: 1023px) {
