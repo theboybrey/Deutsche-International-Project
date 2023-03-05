@@ -453,6 +453,22 @@ header {
 
 
       /* Acknowledgement Section */
+      .ack-text{
+        font-size: 18px; 
+      }
+
+      .ack-img{
+        width: 30%;
+        background-repeat: no-repeat;
+      }
+
+      .readMoreBtn{
+        margin-top: 1rem !important;
+      }
+
+
+      /* School Stats */
+
 }
 
 
