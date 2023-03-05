@@ -10,3 +10,46 @@ body{
 header{
     display: none !important;
 }
+
+/* Login Section */
+.user-login-section{
+    position: absolute;
+    top: 40%;
+    right: 20%;
+}
+
+/* Username Section */
+.username-part, .passcode-part{
+    width: 240px;
+    height: 40px;
+    margin-bottom: 5px;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    font-size: medium !important;
+}
+
+.passcode-part input, .username-part input{
+    outline: none;
+}
+
+.passcode-part svg, .username-part svg{
+    margin-right: -2rem;
+    color: gray;
+}
+
+.primary-btn{
+    width: 140px;
+    height: 40px;
+    background-color: #BF9F62;
+    color: #eee;
+    border-radius: 20px;
+}
+
+.btn-container{
+    justify-content: center !important; 
+    align-items: center !important;
+    display: flex !important;
+    margin: 10px 0;
+}
