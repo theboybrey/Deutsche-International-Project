@@ -412,8 +412,22 @@ header {
     }
   }
 
+    .hero-caption, .news-caption{
+        font-size: 22px;
+    }
 
-  
+    .courses-section{
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 0 2rem;
+        margin-top: -2rem;
+    }
+
+    .first-course, .second-course {
+        border-bottom: 2px solid #eee !important; 
+    }
+
+
 }
 
 /* Tablets */

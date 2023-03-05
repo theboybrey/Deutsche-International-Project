@@ -34,7 +34,7 @@ const LandingPage = () => {
         <p className="caption text-gray-500">Providing an exceptional educational experience for success</p>
       </div>
       {/* Courses and Offers */}
-      <div className="courses-section grid gap-4  grid-cols-3">
+      <div className="courses-section grid gap-4  grid-cols-3 md:flex-rows sm:gap-2 ">
         {/* Images of the Courses Section */}
 
         <div className=" first-course">
