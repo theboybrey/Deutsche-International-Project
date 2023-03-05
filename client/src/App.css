@@ -13,6 +13,10 @@ header {
   background-color: #fff;
 }
 
+.navbar-navigation{
+    display: flex !important;
+}
+
 .hero-text {
   position: relative;
   top: 30%;
@@ -24,7 +28,6 @@ header {
   font-weight: bold;
   color: white; /* set the text color */
   -webkit-text-stroke: 1px #fff; /* set the stroke width and color */
-  text-stroke: 1px #fff; /* standard syntax */
   animation-name: slide-in-from-top;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -297,6 +300,307 @@ header {
   display: none !important;
 }
 
+/* Tablets */
+@media screen and (min-width: 640px) and (max-width: 995px) {
+    /* Navbar Customization */
+  .navbar-navigation {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column-reverse !important;
+    background-color: whitesmoke;
+    border-radius: 0;
+    position: absolute;
+    z-index: 111111 !important;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem !important;
+    justify-content: center;
+    transition: ease-in-out 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scaleX(4rem) !important;
+    align-items: center;
+    font-size: 18px;
+  }
+
+  .navbar-navigation Link:hover {
+    transform: scale(0.9);
+    transition: ease-in-out cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-weight: 600;
+  }
+
+  .header-menu-icon {
+    margin-right: -0px !important;
+    margin-top: 2px;
+  }
+
+  .exitMenu {
+    display: block !important;
+    position: absolute;
+    margin: 1rem;
+    top: 0%;
+    right: 0%;
+  }
+
+  .menu-logo {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 1rem;
+  }
+
+  .findbtn {
+    width: 250px !important;
+    height: 50px !important;
+    background-color: #eee;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 8px;
+  }
+
+  .findbtn-text {
+    border: none;
+    display: block;
+    height: 80%;
+    background: transparent;
+    width: 75%;
+  }
+
+  .findbtn-text:focus-within {
+    border: none;
+    outline: none;
+  }
+
+  /* Header Width */
+
+  header {
+    width: 100vw !important;
+  }
+
+  .header-menu-icon {
+    display: block !important;
+    margin-right: 2rem;
+  }
+
+  /* Hero Section */
+  .hero-image {
+    background-position: center;
+    background-size: cover;
+  }
+
+  .hero-text {
+    font-size: 36px;
+    top: 60%;
+    transform: scaleX(2rem);
+    transition: ease-in-out cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation-name: slide-in-from-top;
+    animation-duration: 0.9s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slide-in-from-top {
+    0% {
+      transform: translateY(-80%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  .hero-caption,
+  .news-caption {
+    font-size: 32px;
+  }
+
+  /* Course Section */
+  .courses-section {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 0 2rem;
+    margin-top: -2rem;
+  }
+
+  .first-course,
+  .second-course {
+    border-bottom: 2px solid #eee !important;
+  }
+
+  /* News Section */
+  .news-section {
+    padding: 0 4rem !important;
+    gap: 2rem !important;
+  }
+
+  .news-img {
+    height: 320px;
+    width: 350px;
+  }
+
+  .news-img-caption {
+    top: 85%;
+  }
+
+  .news-first,
+  .news-sec,
+  .news-third {
+    background-size: cover;
+    box-shadow: inset 0 10px 200px #000;
+  }
+
+  /* Acknowledgement Section */
+  .ack-text {
+    font-size: 28px;
+  }
+
+  .ack-img {
+    width: 30%;
+    background-repeat: no-repeat;
+  }
+
+  .readMoreBtn {
+    margin-top: 1rem !important;
+  }
+
+  /* School Stats */
+  .school-stats {
+    width: 101vw;
+    margin: 0 -18px !important;
+    justify-content: center;
+    align-items: left;
+    padding: 1rem !important;
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .school-ads {
+    font-weight: 700;
+    text-align: center;
+    font-size: 28px;
+    font-family: "DM Sans";
+  }
+
+  .stats {
+    margin: 0 !important;
+    font-weight: 500;
+  }
+
+  .enrolled-students h2,
+  .number-of-staff h2,
+  .global-alumni h2 {
+    font-size: 22px !important;
+    font-family: "Sora";
+    font-weight: bold;
+  }
+
+  .alumni-images img {
+    width: 100vw;
+    height: 470px;
+    justify-content: center;
+    display: none;
+    align-items: center;
+    margin-left: 1rem;
+  }
+
+  .alumni-text-section {
+    display: flex;
+    flex-direction: column;
+    top: 10%;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .alumni-text-section .enroll-ads {
+    font-size: 28px;
+    width: 100vw !important;
+    text-align: center !important;
+  }
+
+  .enroll-ads-btn {
+    width: 250px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Footer */
+  .footer {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    /* overflow-x: hidden; */
+  }
+
+  .seperator {
+    height: 1px;
+    width: 90%;
+    margin-right: 2rem;
+    margin-top: -3rem !important ;
+  }
+
+  .details {
+    display: flex !important;
+    /* flex-direction: column !important; */
+    gap: 4rem;
+    
+  }
+
+  /* Newsletter Section */
+  .newsletter-section{
+    margin-right: -2rem;
+  }
+
+  /* Info Part */
+  .info-part{
+    font-size: medium;
+    display: flex !important;
+    /* flex-direction: column !important; */
+  }
+
+  .sch-logo{
+    font-size: 22px;
+  }
+
+  .details .footer-caption{
+    font-size: medium;
+  }
+
+  .btm-footer{
+    font-size: 12px;
+    margin-top: -10rem !important;
+  }
+
+  .rights-reserved{
+    width: 250px !important;
+    font-size: medium;
+  }
+
+  .sch-copyright{
+    margin-left: 20rem!important;
+    display: block;
+    font-size: medium;
+    position: absolute !important;
+    /* margin-top: 80px; */
+    color: gray;
+    
+  }
+
+  .btm-sub{
+    display: flex !important;
+    flex-direction: column !important;
+    text-align: right;
+    position: absolute;
+    font-size: medium;
+    right: 2rem;
+  }
+}
+
+
 /* Mobile Phones */
 @media screen and (max-width: 639px) {
   /* styles for screens smaller than 639px */
@@ -306,7 +610,7 @@ header {
     display: block;
     height: 100vh;
     width: 100vw;
-    flex-direction: column-reverse;
+    flex-direction: column-reverse !important;
     background-color: whitesmoke;
     border-radius: 0;
     position: absolute;
@@ -592,302 +896,3 @@ header {
   }
 }
 
-/* Tablets */
-@media screen and (min-width: 640px) and (max-width: 1023px) {
-    /* Navbar Customization */
-  .navbar-navigation {
-    display: block;
-    height: 100vh;
-    width: 100vw;
-    flex-direction: column-reverse;
-    background-color: whitesmoke;
-    border-radius: 0;
-    position: absolute;
-    z-index: 111111 !important;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    padding: 2rem !important;
-    justify-content: center;
-    transition: ease-in-out 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    transform: scaleX(4rem) !important;
-    align-items: center;
-    font-size: 18px;
-  }
-
-  .navbar-navigation Link:hover {
-    transform: scale(0.9);
-    transition: ease-in-out cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    font-weight: 600;
-  }
-
-  .header-menu-icon {
-    margin-right: -0px !important;
-    margin-top: 2px;
-  }
-
-  .exitMenu {
-    display: block !important;
-    position: absolute;
-    margin: 1rem;
-    top: 0%;
-    right: 0%;
-  }
-
-  .menu-logo {
-    display: block !important;
-    position: absolute;
-    left: 0;
-    top: 0;
-    margin: 1rem;
-  }
-
-  .findbtn {
-    width: 250px !important;
-    height: 50px !important;
-    background-color: #eee;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    border-radius: 8px;
-  }
-
-  .findbtn-text {
-    border: none;
-    display: block;
-    height: 80%;
-    background: transparent;
-    width: 75%;
-  }
-
-  .findbtn-text:focus-within {
-    border: none;
-    outline: none;
-  }
-
-  /* Header Width */
-
-  header {
-    width: 100vw !important;
-  }
-
-  .header-menu-icon {
-    display: block !important;
-    margin-right: 2rem;
-  }
-
-  /* Hero Section */
-  .hero-image {
-    background-position: center;
-    background-size: cover;
-  }
-
-  .hero-text {
-    font-size: 36px;
-    top: 60%;
-    transform: scaleX(2rem);
-    transition: ease-in-out cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation-name: slide-in-from-top;
-    animation-duration: 0.9s;
-    animation-fill-mode: forwards;
-  }
-
-  @keyframes slide-in-from-top {
-    0% {
-      transform: translateY(-80%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-
-  .hero-caption,
-  .news-caption {
-    font-size: 22px;
-  }
-
-  /* Course Section */
-  .courses-section {
-    display: flex !important;
-    flex-direction: column !important;
-    padding: 0 2rem;
-    margin-top: -2rem;
-  }
-
-  .first-course,
-  .second-course {
-    border-bottom: 2px solid #eee !important;
-  }
-
-  /* News Section */
-  .news-section {
-    padding: 0 4rem !important;
-    gap: 2rem !important;
-  }
-
-  .news-img {
-    height: 320px;
-    width: 350px;
-  }
-
-  .news-img-caption {
-    top: 85%;
-  }
-
-  .news-first,
-  .news-sec,
-  .news-third {
-    background-size: cover;
-    box-shadow: inset 0 10px 200px #000;
-  }
-
-  /* Acknowledgement Section */
-  .ack-text {
-    font-size: 28px;
-  }
-
-  .ack-img {
-    width: 30%;
-    background-repeat: no-repeat;
-  }
-
-  .readMoreBtn {
-    margin-top: 1rem !important;
-  }
-
-  /* School Stats */
-  .school-stats {
-    width: 101vw;
-    margin: 0 -18px !important;
-    justify-content: center;
-    align-items: left;
-    padding: 1rem !important;
-    display: flex !important;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .school-ads {
-    font-weight: 700;
-    text-align: center;
-    font-size: 28px;
-    font-family: "DM Sans";
-  }
-
-  .stats {
-    margin: 0 !important;
-    font-weight: 500;
-  }
-
-  .enrolled-students h2,
-  .number-of-staff h2,
-  .global-alumni h2 {
-    font-size: 22px !important;
-    font-family: "Sora";
-    font-weight: bold;
-  }
-
-  .alumni-images img {
-    width: 100vw;
-    height: 470px;
-    justify-content: center;
-    display: none;
-    align-items: center;
-    margin-left: 1rem;
-  }
-
-  .alumni-text-section {
-    display: flex;
-    flex-direction: column;
-    top: 10%;
-    height: 350px;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .alumni-text-section .enroll-ads {
-    font-size: 28px;
-    width: 100vw !important;
-    text-align: center !important;
-  }
-
-  .enroll-ads-btn {
-    width: 250px !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  /* Footer */
-  .footer {
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    /* overflow-x: hidden; */
-  }
-
-  .seperator {
-    height: 1px;
-    width: 90%;
-    margin-right: 2rem;
-    margin-top: -3rem !important ;
-  }
-
-  .details {
-    display: flex !important;
-    /* flex-direction: column !important; */
-    gap: 4rem;
-    
-  }
-
-  /* Newsletter Section */
-  .newsletter-section{
-    margin-right: -2rem;
-  }
-
-  /* Info Part */
-  .info-part{
-    font-size: medium;
-    display: flex !important;
-    /* flex-direction: column !important; */
-  }
-
-  .sch-logo{
-    font-size: 22px;
-  }
-
-  .details .footer-caption{
-    font-size: medium;
-  }
-
-  .btm-footer{
-    font-size: 12px;
-    margin-top: -10rem !important;
-  }
-
-  .rights-reserved{
-    width: 250px !important;
-    font-size: medium;
-  }
-
-  .sch-copyright{
-    margin-left: 20rem!important;
-    display: block;
-    font-size: medium;
-    position: absolute !important;
-    /* margin-top: 80px; */
-    color: gray;
-    
-  }
-
-  .btm-sub{
-    display: flex !important;
-    flex-direction: column !important;
-    text-align: right;
-    position: absolute;
-    font-size: medium;
-    right: 2rem;
-  }
-}
