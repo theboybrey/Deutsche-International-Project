@@ -332,14 +332,14 @@ const LandingPage = () => {
 
         {/* Copyright */}
         <div className="btm-footer text-gray-300 -mt-10 px-14 grid-cols-3 grid flex bg-black">
-          <p className='ml-4'>All Rights Reserved. The Digerati</p>
+          <p className='ml-4 rights-reserved'>All Rights Reserved. The Digerati</p>
 
-          <p className='ml-20'> A deutscheinternationalschool © 2023</p>
+          <p className='ml-20 sch-copyright'> A deutscheinternationalschool © 2023</p>
 
           <div className="grid grid-cols-3 flex btm-sub ">
             <li>Privacy Policy</li>
-            <li>Terms & Conditions</li>
             <li>Cookie Policies</li>
+            <li>Terms & Conditions</li>
           </div>
 
         </div>
