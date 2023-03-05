@@ -1,0 +1,388 @@
+.hero-image {
+  background: url("./assets/hero-boy.png") no-repeat;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  background-size: cover;
+  /* background-position: ; */
+}
+
+header {
+  position: fixed !important;
+  z-index: 1;
+  background-color: #fff;
+}
+
+.hero-text {
+  position: relative;
+  top: 30%;
+  left: 3%;
+  font-family: "Sora";
+  font-weight: bold;
+  line-height: normal;
+  font-size: 52px;
+  font-weight: bold;
+  color: white; /* set the text color */
+  -webkit-text-stroke: 1px #fff; /* set the stroke width and color */
+  text-stroke: 1px #fff; /* standard syntax */
+}
+
+.hero-caption,
+.news-caption {
+  text-align: center;
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.hero-caption .caption,
+.news-caption .caption {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.courses-section {
+  padding: 0 4rem;
+}
+
+.course-img {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 5px;
+  background-color: #f2f6fe;
+  border-radius: 10%;
+  padding: 12px;
+  background-position: center;
+}
+
+.course-caption-text {
+  margin: 2px 0 3rem 0;
+}
+
+.btn {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.news-section {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+}
+
+.news-img {
+  height: 450px;
+  width: 450px;
+  background-color: aqua;
+  gap: 5px !important;
+  border-radius: 4px;
+}
+
+.news-first {
+  background: url(./assets/news-img1.png);
+  background-size: cover;
+  padding: 20px;
+  box-shadow: inset 0 0 100px 0 #000;
+}
+
+.news-sec {
+  background: url(./assets/news-img2.png);
+  background-position: cover;
+  background-size: cover;
+  padding: 20px;
+  box-shadow: inset 0 0 100px 0 #000;
+}
+
+.news-third {
+  background: url(./assets/news-img3.png);
+  background-position: cover;
+  padding: 20px;
+  background-size: cover;
+  box-shadow: inset 0 0 100px #000;
+}
+
+.news-img-caption {
+  position: relative;
+  top: 90%;
+  left: 0;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Acknowledgement Section */
+.ack {
+  height: 450px;
+  width: 100vw;
+  background-color: #052326 !important;
+  margin-left: -1rem;
+  margin-top: 1rem !important;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.ack-text {
+  line-height: normal;
+  font-size: 36px;
+  width: 49.5%;
+  font-weight: bold;
+}
+
+.ack-img {
+  height: 246px;
+  font-family: "Sora";
+  width: 230px;
+  background: url(./assets/papa-bi.png);
+  background-position: center;
+  background-size: contain;
+  border-radius: 2px;
+}
+
+/* Subcription Text */
+.sub-text {
+  font-weight: 500;
+  font-size: 16px;
+  /* color: #ee7; */
+}
+
+.school-stats {
+  height: 300px;
+  width: 101vw;
+  background-color: #006e90;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: white;
+  gap: 22rem;
+  /* margin-right: -1000px !important; */
+}
+
+.school-ads {
+  width: 280px;
+  font-weight: bolder !important;
+}
+
+.school-ads,
+.enrolled-students h2,
+.number-of-staff h2,
+.global-alumni h2 {
+  font-size: 30px;
+  font-family: "Sora";
+  font-weight: bold;
+}
+
+.alumni-images {
+  width: 100vw;
+  height: 470px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin-left: -1rem;
+}
+
+.just-an-empty-div {
+  justify-content: space-between;
+  position: relative;
+  top: 40%;
+  display: flex;
+  align-items: center;
+  /* gap: 20rem !important; */
+}
+
+.fourth-and-fifth-img {
+  justify-content: center !important;
+  display: flex;
+  align-items: center !important;
+}
+
+.image-alumni.fourth {
+  margin-left: 55%;
+  margin-top: -20px !important;
+}
+
+.alumni-text-section {
+  position: relative;
+  top: 30%;
+}
+
+.alumni-text-section p {
+  font-size: 28px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.alumni-img button {
+  position: relative;
+  font-family: "Sora";
+}
+
+/* Footer */
+.footer {
+  height: 410px;
+  display: flex;
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  color: white;
+  gap: 10%;
+  font-family: "Inter";
+}
+
+.footer ul li a:hover,
+.school-details h1:hover {
+  cursor: pointer;
+  color: #ee7;
+  transition: ease-in cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.seperator {
+  height: 1px;
+  width: 92%;
+  margin-right: 5rem;
+}
+
+.newsletter-sub {
+  width: 320px;
+  padding: 3px;
+  padding-right: 5px;
+  border-radius: 8px;
+}
+
+.newsletter-section input {
+  outline: none;
+  width: 88%;
+  color: black;
+}
+
+.newsletter-section input::placeholder {
+  color: #000 !important;
+}
+
+.send-btn {
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  position: relative;
+  /* margin-right: 0%; */
+  cursor: pointer;
+}
+
+.btm-sub li {
+  list-style: none;
+  cursor: pointer;
+}
+
+.exitMenu{
+    display: none;
+}
+
+.findbtn-text{
+    display: none;
+  }
+
+  .menu-logo{
+    display: none !important;
+  }
+
+
+/* Mobile Phones */
+@media screen and (max-width: 639px) {
+  /* styles for screens smaller than 639px */
+
+
+  /* Navbar Customization */
+  .navbar-navigation {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column-reverse;
+    background-color: whitesmoke;
+    border-radius: 0;
+    position: absolute;
+    z-index: 1111;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 2rem !important;
+    justify-content: center;
+    transition: ease-in-out .4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: scaleX(4rem) !important;
+    align-items: center;
+    font-size: 18px;
+  }
+
+  .navbar-navigation Link:hover {
+    transform: scale(0.9);
+    transition: ease-in-out cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-weight: 600;
+  }
+
+  .header-menu-icon{
+    margin-right: -0px !important;
+    margin-top: 2px;
+  }
+
+  .exitMenu {
+    display: block !important;
+    position: absolute;
+    margin: 1rem;
+    top: 0%;
+    right: 0%;
+  }
+
+  .menu-logo{
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 1rem;
+  }
+
+  .findbtn{
+    width: 250px !important;
+    height: 50px !important;
+    background-color: #eee;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 8px;
+  }
+
+  .findbtn-text{
+    border: none;
+    display: block;
+    height: 80%;
+    background: transparent;
+    width: 75%;
+  }
+
+  .findbtn-text:focus-within{
+    border: none;
+    outline: none;
+  }
+
+  /* Header Width */
+
+  header{
+    width: 100vw !important;
+  }
+
+
+
+  .header-menu-icon {
+    display: block !important;
+    margin-right: 2rem;
+  }
+
+  /* Hero Section */
+
+
+}
+
+/* Tablets */
+@media screen and (min-width: 640px) and (max-width: 1023px) {
+}

@@ -23,7 +23,11 @@ const MONGO_URI = () => {
 // DATABASE CONNECTION
 const DBCONNET = (callback) => {
     try{
-        mongoose.connect(MONGO_URI());
+        mongoose.connect(MONGO_URI(),{
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            // useCreateIndex: true,
+        });
         console.log("MongoDB connected");
         callback();
     } catch(err){
