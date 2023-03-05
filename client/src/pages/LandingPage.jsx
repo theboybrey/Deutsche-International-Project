@@ -176,7 +176,7 @@ const LandingPage = () => {
             {/* Join Us Button */}
 
             <div className="btn justify-center mb ">
-              <Link to={'/login'} className="bg-black text-white py-3 px-5 flex gap-2">Enroll Your Ward Now
+              <Link to={'/login'} className="bg-black text-white py-3 px-5 flex gap-2 enroll-ads-btn">Enroll Your Ward Now
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
@@ -245,14 +245,14 @@ const LandingPage = () => {
 
       {/* Seperator Footer */}
       <div className="blank-section footer bg-black -ml-10 -mr-4 grid grid-row-3 flex ">
-        <div className="details grid grid-cols-2 p-16">
+        <div className="details grid grid-cols-2 p-16 ">
           <div className="school-details">
-            <h1 className='text-white text-2xl mb-1'>deutscheinternationalschool</h1>
+            <h1 className='text-white text-2xl sch-logo mb-1'>deutscheinternationalschool</h1>
             <p className='text-gray-300'>Building Future Leaders</p>
           </div>
-          <div className="flex grid grid-cols-2 gap-4">
+          <div className="flex grid grid-cols-2 gap-4 info-part">
             <div className="dev-team">
-              <h1 className='text-white text-2xl mb-1'>Quick Links</h1>
+              <h1 className='text-white text-2xl mb-1  footer-caption'>Quick Links</h1>
               <div className="grid grid-cols-2 gap-2">
                 <ul>
                   <li><a href="/">Home</a></li>
@@ -271,7 +271,7 @@ const LandingPage = () => {
 
             {/* Contact Information and Newsletter*/}
             <div className="newsletter-section text-gray-300">
-              <h1 className='text-2xl text-white mb-1'>Contact Information</h1>
+              <h1 className='text-2xl text-white mb-1 footer-caption'>Contact Information</h1>
 
               {/* Email  */}
               <div className="flex gap-2 p-2">

@@ -236,8 +236,6 @@ header {
 .footer {
   height: 410px;
   display: flex;
-  /* justify-content: space-between; */
-  /* align-items: center; */
   color: white;
   gap: 10%;
   font-family: "Inter";
@@ -483,7 +481,7 @@ header {
     font-weight: 600;
     text-align: center;
     font-size: 18px;
-    font-family: 'DM Sans';
+    font-family: "DM Sans";
   }
 
   .stats {
@@ -491,7 +489,6 @@ header {
     font-weight: 500;
   }
 
-  
   .enrolled-students h2,
   .number-of-staff h2,
   .global-alumni h2 {
@@ -500,7 +497,7 @@ header {
     font-weight: bold;
   }
 
-  .alumni-images img{
+  .alumni-images img {
     width: 100vw;
     height: 470px;
     justify-content: center;
@@ -509,24 +506,63 @@ header {
     margin-left: 1rem;
   }
 
-  .alumni-text-section{
+  .alumni-text-section {
     display: flex;
     flex-direction: column;
     top: 10%;
-    height: 400px; 
+    height: 350px;
     justify-content: center;
     align-items: center;
   }
 
-  .alumni-text-section .enroll-ads{
+  .alumni-text-section .enroll-ads {
     font-size: 18px;
-    /* position: absolute; */
     width: 100vw !important;
     text-align: center !important;
-    
   }
 
+  .enroll-ads-btn {
+    width: 250px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  /* Footer */
+  .footer {
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    /* overflow-x: hidden; */
+  }
+
+  .seperator {
+    height: 1px;
+    width: 75%;
+    margin-right: 2rem;
+    margin-top: -7rem !important ;
+  }
+
+  .details {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2rem;
+  }
+
+  /* Info Part */
+  .info-part{
+    font-size: small;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .sch-logo{
+    font-size: 22px;
+  }
+
+  .details .footer-caption{
+    font-size: medium;
+  }
 }
 
 /* Tablets */
