@@ -88,7 +88,7 @@ const LandingPage = () => {
       {/* Lastest Newsletter */}
       <h2 className="news-caption">Latest Newsletter</h2>
       <p className="caption text-gray-500 text-center mb-4">Stay up-to-date with the latest news and events at our school</p>
-      <div className="news-section px-9 py-8 grid gap-6 grid-cols-3 mb-2">
+      <div className="news-section px-9 py-8 grid gap-6 grid-cols-3 mb-2 ">
         <div className="news-img news-first">
           <p className="news-img-caption">
             New school fees release <br />
