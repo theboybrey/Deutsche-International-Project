@@ -1,14 +1,12 @@
 body{
     /* color: black; */
-    background: url(../assets/bg-admission-page.jpg);
     background-position: baseline;
     background-size: cover;
-
 }
 
 
 header{
-    display: none !important;
+    /* display: none !important; */
 }
 
 /* Login Section */
