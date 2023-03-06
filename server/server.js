@@ -3,6 +3,7 @@ import DBCONNET from './config/index.js'
 import dotenv from 'dotenv'
 import cors from 'cors'
 import ErrorHandler from './middleware/ErrorHandler.js'
+import AuthRoute from './routes/auth.routes.js'
 import StudentRoute from './routes/student.routes.js'
 
 // env Config
@@ -32,6 +33,7 @@ app.get('/test', (req, res) => {
 
 // Endpoints for API Connections
 app.use('/student', StudentRoute)
+app.use('/auth', AuthRoute)
 
 
 // Error Handling

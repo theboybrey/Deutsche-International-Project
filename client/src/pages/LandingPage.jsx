@@ -17,7 +17,7 @@ const LandingPage = () => {
 
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
 
       {/* Hero Section of the Portal */}
       <div className="hero-section -ml-4  h-50">

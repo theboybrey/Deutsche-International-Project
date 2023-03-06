@@ -33,9 +33,14 @@ export const LOGIN = async (info, setLoading, callback) => {
             url: 'auth/login',
             data: info,
             headers: {
-                'Content-Type': 'application/json',
+                "Content-Type": "application/json",
             }
         })
+        if(data.success){
+            callback(data)
+        }else{
+            setLoading(false)
+        }
     } catch (error) {
         setLoading(false)
         console.log(error?.response?.data?.message || 'Something went wrong')

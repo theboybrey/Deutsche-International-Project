@@ -1,7 +1,9 @@
 body{
-    /* color: black; */
-    background-position: baseline;
-    background-size: cover;
+    color: black;
+    background: url(../assets/loginBg.jpg) no-repeat !important;
+    height: 100vh;
+    background-position: baseline !important;
+    background-size: cover !important;
 }
 
 
@@ -12,6 +14,7 @@ header{
 /* Login Section */
 .user-login-section{
     position: absolute;
+    display: block !important;
     top: 40%;
     right: 20%;
 }
