@@ -6,7 +6,7 @@ const router = Router();
 // GET Student 
 router.get("/", getStudents);
 
-// POST Student
-router.post('/', addStudent);
+// // POST Student
+// router.post('/', addStudent);
 
 export default router;
