@@ -1,3 +1,8 @@
+
+body{
+  background: white;
+}
+
 .hero-image {
   background: url("./assets/hero-boy.png") no-repeat;
   height: 100vh;
@@ -16,6 +21,7 @@ header {
 .navbar-navigation{
     display: flex !important;
 }
+
 
 .hero-text {
   position: relative;

@@ -16,7 +16,7 @@ const MONGO_URI = () => {
         case "test": 
         return process.env.MONGODB_URI_TEST;
             break;
-            default:
+            // default:
     }
 }
 
@@ -31,7 +31,7 @@ const DBCONNET = (callback) => {
         console.log("MongoDB connected");
         callback();
     } catch(err){
-        console.warn('Error connecting...');
+        console.log('Error connecting...');
         console.log(err);
     }
 }

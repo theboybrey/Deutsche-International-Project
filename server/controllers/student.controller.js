@@ -22,35 +22,3 @@ export const getStudents = async (req, res, next) => {
 }
 
 
-// Adding or Registering Students
-export const addStudent = async (req, res, next) => {
-    const {
-        firstName,
-        lastName,
-        age,
-        date_of_birth,
-        email,
-        password,
-        gender,
-        address,
-    } = req.body;
-    try {
-        const student = await Student.create({
-            firstName,
-            lastName,
-            age,
-            date_of_birth,
-            email,
-            password: bcrypt.hashSync(password, bcryptSalt),
-            gender,
-            address,
-        })
-        res.status(201).json({
-            success: true,
-            message: 'Successfully registered student.',
-            data: student,
-        })
-    } catch (error) {
-        next(error)
-    }
-}
