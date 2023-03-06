@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, Navigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import '../App.css'
 
 
@@ -36,10 +36,10 @@ const Header = () => {
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
-        </div>
+        </div>    
 
 
-        {showMenu && <div className='flex gap-2 border-gray-300 rounded px-4 py-2 navbar-navigation md:flex-row sm:flex-row'>
+        {showMenu && <div className='flex gap-2 border-gray-300 rounded px-4 py-2 navbar-navigation md:hidden block '>
           {/*Header Navigation  */}
           <Link to={'/'}>Home</Link>
           <Link to={'/facility'}>Facility</Link>

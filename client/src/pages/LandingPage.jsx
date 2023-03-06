@@ -34,7 +34,7 @@ const LandingPage = () => {
         <p className="caption text-gray-500">Providing an exceptional educational experience for success</p>
       </div>
       {/* Courses and Offers */}
-      <div className="courses-section grid gap-4  grid-cols-3">
+      <div className="courses-section grid gap-4  grid-cols-3 md:flex-rows sm:gap-2 ">
         {/* Images of the Courses Section */}
 
         <div className=" first-course">
@@ -88,7 +88,7 @@ const LandingPage = () => {
       {/* Lastest Newsletter */}
       <h2 className="news-caption">Latest Newsletter</h2>
       <p className="caption text-gray-500 text-center mb-4">Stay up-to-date with the latest news and events at our school</p>
-      <div className="news-section px-9 py-8 grid gap-6 grid-cols-3 mb-2">
+      <div className="news-section px-9 py-8 grid gap-6 grid-cols-3 mb-2 ">
         <div className="news-img news-first">
           <p className="news-img-caption">
             New school fees release <br />
@@ -110,7 +110,7 @@ const LandingPage = () => {
       </div>
 
       {/* Read More Button */}
-      <div className="btn justify-center ">
+      <div className="btn justify-center readMoreBtn">
         <Link className="bg-black text-white py-3 px-5 flex gap-2">Read More
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
             <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
@@ -170,13 +170,13 @@ const LandingPage = () => {
           </div>
 
           <div className="alumni-text-section">
-            <p className='mb-4'>Enroll your ward to join <br />
+            <p className='mb-4 enroll-ads'>Enroll your ward to join <br />
               over 3000+ successful students</p>
 
             {/* Join Us Button */}
 
-            <div className="btn justify-center mb">
-              <Link to={'/login'} className="bg-black text-white py-3 px-5 flex gap-2">Enroll Your Ward Now
+            <div className="btn justify-center mb ">
+              <Link to={'/login'} className="bg-black text-white py-3 px-5 flex gap-2 enroll-ads-btn">Enroll Your Ward Now
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
@@ -245,14 +245,14 @@ const LandingPage = () => {
 
       {/* Seperator Footer */}
       <div className="blank-section footer bg-black -ml-10 -mr-4 grid grid-row-3 flex ">
-        <div className="details grid grid-cols-2 p-16">
+        <div className="details grid grid-cols-2 p-16 ">
           <div className="school-details">
-            <h1 className='text-white text-2xl mb-1'>deutscheinternationalschool</h1>
+            <h1 className='text-white text-2xl sch-logo mb-1'>deutscheinternationalschool</h1>
             <p className='text-gray-300'>Building Future Leaders</p>
           </div>
-          <div className="flex grid grid-cols-2 gap-4">
+          <div className="flex grid grid-cols-2 gap-4 info-part">
             <div className="dev-team">
-              <h1 className='text-white text-2xl mb-1'>Quick Links</h1>
+              <h1 className='text-white text-2xl mb-1  footer-caption'>Quick Links</h1>
               <div className="grid grid-cols-2 gap-2">
                 <ul>
                   <li><a href="/">Home</a></li>
@@ -271,7 +271,7 @@ const LandingPage = () => {
 
             {/* Contact Information and Newsletter*/}
             <div className="newsletter-section text-gray-300">
-              <h1 className='text-2xl text-white mb-1'>Contact Information</h1>
+              <h1 className='text-2xl text-white mb-1 footer-caption'>Contact Information</h1>
 
               {/* Email  */}
               <div className="flex gap-2 p-2">
@@ -332,14 +332,14 @@ const LandingPage = () => {
 
         {/* Copyright */}
         <div className="btm-footer text-gray-300 -mt-10 px-14 grid-cols-3 grid flex bg-black">
-          <p className='ml-4'>All Rights Reserved. The Digerati</p>
+          <p className='ml-4 rights-reserved'>All Rights Reserved. The Digerati</p>
 
-          <p className='ml-20'> A deutscheinternationalschool © 2023</p>
+          <p className='ml-20 sch-copyright'> A deutscheinternationalschool © 2023</p>
 
           <div className="grid grid-cols-3 flex btm-sub ">
             <li>Privacy Policy</li>
-            <li>Terms & Conditions</li>
             <li>Cookie Policies</li>
+            <li>Terms & Conditions</li>
           </div>
 
         </div>
