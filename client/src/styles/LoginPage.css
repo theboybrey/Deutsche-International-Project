@@ -1,0 +1,44 @@
+body{
+    background: url('../assets/loginBg.jpg') ;
+}
+
+header{
+    display: none !important;
+}
+.user-login-section{
+    /* display: flex !important; */
+    position: absolute;
+    right: 15%;
+    top: 55%;
+    flex-direction: column !important;
+}
+
+.user-login-section form {
+    right: 5%;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+
+
+.user-login-section input {
+    background-color: #FFFFFF80;
+}
+
+.passcode-part, .username-part{
+    background-color: #FFFFFF80;
+}
+
+.passcode-part input, .username-part input{
+    background-color: transparent !important;
+}
+
+.passcode-part input::placeholder, .username-part input::placeholder{
+    color: black;
+}
+
+.login-logo{
+    left: 5rem !important;
+    position: absolute;
+    top: -50%;
+}

@@ -1,14 +1,9 @@
 body{
     color: black;
-    background: url(../assets/loginBg.jpg) no-repeat !important;
+    /* background: url(../assets/loginBg.jpg) no-repeat !important; */
     height: 100vh;
     background-position: baseline !important;
     background-size: cover !important;
-}
-
-
-header{
-    display: none !important;
 }
 
 /* Login Section */
@@ -21,7 +16,7 @@ header{
 
 /* Username Section */
 .username-part, .passcode-part{
-    width: 240px;
+    width: 320px;
     height: 40px;
     margin-bottom: 5px;
     background-color: white;
@@ -36,12 +31,11 @@ header{
 }
 
 .passcode-part svg, .username-part svg{
-    margin-right: -2rem;
-    color: gray;
+    margin-right: -5rem;
 }
 
 .primary-btn{
-    width: 140px;
+    width: 280px;
     height: 40px;
     background-color: #BF9F62;
     color: #eee;
@@ -53,4 +47,57 @@ header{
     align-items: center !important;
     display: flex !important;
     margin: 10px 0;
+}
+
+
+/* SIGN UP PST */
+.sign-up-pst{
+    position: absolute;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center !important;
+    align-items:  center !important;
+    height: 5   0%;
+    right: 10%;
+    gap: 1rem;
+    top: 25% !important;
+}
+
+.sign-up-pst form{
+    padding: 10px 40px;
+    display: flex ;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.sign-up-pst form input{
+    padding: 8px 15px;
+    border-radius: 25px;
+    background-color: #FFFFFF80 ;
+    color: black !important;
+}
+
+.sign-up-pst input::placeholder{
+    color: black !important;
+}
+
+.name-field{
+    width: 100%;
+}
+
+
+.name-field input{
+    width: 50%;
+}
+
+
+.signup-btn{
+    color: #eee;
+    background-color: #BF9F62;
+    width: 80%;
+    padding: 8px;
+    justify-self: center;
+    align-self: center;
+    border-radius: 20px;
+    margin-top: 5px;
 }
