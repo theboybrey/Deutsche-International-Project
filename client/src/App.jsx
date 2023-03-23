@@ -21,15 +21,15 @@ function App() {
 
   return (
     <Routes>
-      <Route path='/' element={<Layout/>}>
-        <Route index element={<LandingPage/>}/>
-        <Route path='/signin' element={<LoginPage/>} />
-        <Route path='/login' element={<LoginScreen/>} />
-        <Route path='/register' element={<RegisterPage/>}/>
-        <Route path='/home' element={<HomePage/>} />
-        <Route path='/staff' element={<Staff/>} />
-        <Route path='/enroll' element={<AdmissionPage/>} />
-        <Route path='/facility' element={<FacilityPage/>} />
+      <Route path='/login' element={<LoginScreen />} />
+        <Route path='/register' element={<RegisterPage />} />
+      <Route path='/' element={<Layout />}>
+        <Route index element={<LandingPage />} />
+        <Route path='/signin' element={<LoginPage />} />
+        <Route path='/home' element={<HomePage />} />
+        <Route path='/staff' element={<Staff />} />
+        <Route path='/enroll' element={<AdmissionPage />} />
+        <Route path='/facility' element={<FacilityPage />} />
       </Route>
     </Routes>
   )

@@ -1,9 +1,8 @@
 import { useState } from 'react'
-import '../styles/AdmissionPage.css';
+// import '../styles/AdmissionPage.css';
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../context/stateProvider'
 import { LOGIN } from '../utils/Auth'
-import '../styles/LoginPage.css'
 
 // Importing the Logo
 import sts from '../assets/sts.png'
