@@ -2,13 +2,15 @@ import React, { useState } from 'react';
 import { LOGIN } from '../utils/Auth';
 import { useStateValue } from '../context/stateProvider';
 import '../styles/LoginScreen.css'
-import schLogoIcon from '../assets/sch-logo-login.png'
+import LoginBg from '../assets/signInImg.png'
+import { Link } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 const LoginScreen = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [loading, setLoading] = useState(false);
-    const [{user}, dispatch] = useStateValue();
+    const [{ user }, dispatch] = useStateValue();
 
 
     // Login Functionality
@@ -28,7 +30,7 @@ const LoginScreen = () => {
                 payload: data.data
             })
             console.log(data.data)
-            window.location.href = '/';
+            window.location.href = '/apply';
         })
     }
 
@@ -44,58 +46,77 @@ const LoginScreen = () => {
     // };
 
     return (
-        <div className="flex flex-col justify-center items-center min-h-screen bg-white-100">
-            <div className="bg-white border shadow-md rounded-2xl px-8 pt-6 pb-8 mb-4 flex flex-col w-full md:w-1/2 lg:w-1/3">
-                <form onSubmit={login} className="mb-4">
-                    <div className="logo-header items-center my-2">
-                        <img src={schLogoIcon} alt="Admin Icon" width={70} />
-                        <p className="text-black  font-bold ">deutscheinternational</p>
+        <div className="grid userLogin grid-cols-2 ">
+            {/* Login Section */}
+            <div className="flex flex-col flex flex-wrap-reverse gap-6 p-5 font-gilroy min-h-screen items-center max-w-7xl mx-auto w-full justify-around justify-center items-center">
+                <form onSubmit={login} action="" className="login-data-form">
+                    <h2 className="text-xl font-bold py-2 mb-6">deutscheinternationalschool</h2>
+                    <h1 className="text-2xl my-2 font-semibold">Akwaaba!</h1>
+                    <p className="text-xl my-2">That's Our Way of Welcoming You Back.</p>
+
+                    {/* Email and Password Sections */}
+                    <label htmlFor="email" className='px-1 py-2 text-lg '>Email</label>
+                    <input
+                        id="email-address"
+                        name="email"
+                        type="email"
+                        autoComplete="email"
+                        required
+                        className="appearance-none rounded-none relative block px-3 py-3 border  bg-gray-50 border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none mb-3 focus:ring-black-500 focus:border-black-500 focus:z-10 sm:text-sm"
+                        placeholder="Enter Email Address"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    {/* <br /> */}
+
+                    {/* Password Section */}
+                    <label htmlFor="password" className='px-1 py-2 text-lg'>Password</label>
+                    <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        autoComplete="password"
+                        required
+                        className="appearance-none rounded-none relative block px-3 py-3 border  bg-gray-50 border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none mb-3 focus:ring-black-500 focus:border-black-500 focus:z-10 sm:text-sm"
+                        placeholder="Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
+
+                    {/* Forgot Password Component */}
+                    <div className="flex items-center justify-end ">
+                        <Link to={'/forgot-password'} className="inline-block align-baseline font text-md text-blue-500 hover:text-blue-800" href="#">
+                            Forgot Password?
+                        </Link>
                     </div>
-                    <div className="mb-4">
-                        <label className="block text-gray-700 font mb-1" htmlFor="email">
-                            Email Address
-                        </label>
-                        <input
-                            className=" rounded appearance-none border  w-full py-3 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                            id="email"
-                            type="email"
-                            name="email"
-                            value={email}
-                            onChange={(event) => setEmail(event.target.value)}
-                            placeholder="example@domain.com"
-                            required
-                        />
-                    </div>
-                    <div className="mb-6">
-                        <label className="block text-gray-700 font mb-1" htmlFor="password">
-                            Password
-                        </label>
-                        <input
-                            className=" appearance-none border rounded w-full py-3 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-                            id="password"
-                            type="password"
-                            name="password"
-                            value={password}
-                            onChange={(event) => setPassword(event.target.value)}
-                            placeholder="Enter Password"
-                            required
-                        />
-                    </div>
-                    <div className="flex items-center justify-between">
-                        <button
-                            className="login-btn w-full hover:bg-blue-700 text-white font py-2 pt-2 pb-4 rounded focus:outline-none focus:shadow-outline"
-                            type="submit"
+
+                    {/* Submit Button */}
+
+                    <div className="btn justify-center mt-3 w-full">
+                        <button to={'#'}
+                            type='submit'
                             disabled={loading}
-                        >
-                            {loading ? `Logging in...`: 'Sign in'}
+                            className="bg-black text-white py-3 px-5 flex gap-2 after:w-full z-[2] after:absolute relative after:h-full  after:left-0 after:top-0 after:-z-[1] hover:after:opacity-0 after:opacity-100  after:scale-75 hover:after:scale-150 after:transition-all after:duration-700  flex items-center gap-1 px-4  p-2 h-12 rounded-sm group justify-center after:bg-black w-full rounded-lg justify-center w-full">
+                            {loading ? `Logging in...` : `Sign in`}
                         </button>
                     </div>
+
+                        {/* Sign Up Link */}
+                        <p className="justify-start -mt-4 align-start">Don't have an account yet? <Link 
+                        to={'/register'}
+                        className='underline font-semibold'>Sign Up Now</Link> </p>
                 </form>
-                <div className="flex items-center justify-center">
-                    <a className="inline-block align-baseline font text-sm text-blue-500 hover:text-blue-800" href="#">
-                        Forgot Password?
-                    </a>
-                </div>
+            </div>
+
+            {/* Image Advertisement Section */}
+            <div className="w-full login-img-ads hidden md:flex  max-w-lg  h-[70vh] relative  flex-col justify-end top-0 left-0 after:h-full after:absolute after:w-full after:bg-gradient-to-b  after:from-transparent after:via-transparent after:to-black hover:scale-[1.06] hover:z-[2]  hover:backdrop-blur-lg transition-all hover:outline hover:outline-2 hover:outline-offset-8 outline-black rounded-3xl overflow-hidden">
+                <img
+                    width={'1410'}
+                    height={'1058'}
+                    src={LoginBg}
+                    className='w-full  object-cover h-full absolute'></img>
+                <h3 className="z-[1] text-white px-6 py-2 lg:text-lg font-sora">“ We appreciate the school's emphasis on diversity, equity, and inclusion. Our daughter has been exposed to a wide range of cultures and perspectives. ”</h3>
+                <h4 className="z-[1] text-white px-6 pb-5 text-sm font-sora">Mrs. Nathalie Offei Ansah, Parent</h4>
             </div>
         </div>
     );

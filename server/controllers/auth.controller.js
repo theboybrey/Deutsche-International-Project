@@ -9,14 +9,14 @@ const bcryptSalt = bcrypt.genSaltSync(10)
 // Creating a User Account
 export const signup = async (req, res, next) => {
     const {
-        firstName,
+        fullName,
         lastName,
         email,
         password,
-        gender,
-        address,
-        date_of_birth,
-        telephone,
+        // gender,
+        // address,
+        // date_of_birth,
+        // telephone,
     } = req.body
 
     try {
@@ -26,14 +26,14 @@ export const signup = async (req, res, next) => {
         }
 
         const student = await STUDENT.create({
-            firstName,
+            fullName,
             lastName,
             email,
             password : bcrypt.hashSync(password, bcryptSalt),
-            gender,
-            address,
-            date_of_birth,
-            telephone,
+            // gender,
+            // address,
+            // date_of_birth,
+            // telephone,
         })
         res.status(201).json({
             success: true,

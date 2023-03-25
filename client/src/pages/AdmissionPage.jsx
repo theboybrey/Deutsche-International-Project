@@ -1,107 +1,141 @@
-import React, { useState } from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { LOGIN, SIGNUP } from '../utils/Auth';
+import { useStateValue } from '../context/stateProvider';
+import SignUpBg from '../assets/signUpImg.png'
+import { Link, useNavigate} from 'react-router-dom';
 import { toast } from 'react-toastify';
-import { SIGNUP } from '../utils/Auth';
-
-import sts from '../assets/sts.png'
 
 
 const AdmissionPage = () => {
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [gender, setGender] = useState('');
-  const [address, setAddress] = useState('');
-  const [date_of_birth, setDateOfBirth] = useState('');
-  const [telephone, setTelephone] = useState('');
-  const [loading, setLoading] = useState('');
+    const [fullName, setFullName] = useState('');
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [confirmPassword, setConfirmPassword] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [{ user }, dispatch] = useStateValue();
+    const navigate = useNavigate();
 
-  // Register A Student
-  const registerUser = (e) => {
-    e.preventDefault();
-    setLoading(true);
-    const userData = {
-      firstName,
-      lastName,
-      email,
-      password,
-      gender,
-      address,
-      date_of_birth,
-      telephone,
+
+    // Sign Up Functionality
+    const registerUser = (e) => {
+        e.preventDefault();
+        setLoading(true);
+        const userData = {
+            fullName,
+            email,
+            password,
+            confirmPassword,
+        }
+        SIGNUP(userData, setLoading, (data) => {
+            setLoading(false);
+            console.log(data)
+            navigate('/login');
+            toast.success('Registration Successful', {
+                position: 'top-center'
+            })
+        })
     }
-    SIGNUP(userData, setLoading, (data) => {
-      setLoading(false)
-      console.log(data)
-      toast.success('Registration Successful', {
-        position: 'top-center'
-      })
-    })
-  }
-  return (
-    <div className='mt-4 grow flex items-center justify-around'>
-      <div className="mb-60 sign-up-pst">
-        <img src={sts} width={200}></img>
-        <h1 className='text-white text-3xl -mb-2 hidden'>Create a new account</h1>
-        <form action="" className='max-w-md mx-auto' onSubmit={registerUser}>
 
-          {/* Name Input Field */}
-          <div className="flex gap-2 name-field">
-            {/* Fisrt Name */}
-            <input type="text" placeholder="First Name"
-              value={firstName}
-              onChange={e => setFirstName(e.target.value)} />
+    return (
+        <div className="grid userLogin grid-cols-2 ">
+            {/* Login Section */}
+            <div className="flex flex-col flex flex-wrap-reverse gap-6 p-5 font-gilroy min-h-screen items-center max-w-7xl mx-auto w-full justify-around justify-center items-center">
+                <form onSubmit={registerUser} action="" className="login-data-form">
+                    <h2 className="text-xl font-bold py-2 mb-6">deutscheinternationalschool</h2>
+                    <h1 className="text-2xl my-2 font-semibold">Sign Up To Enroll Your Ward</h1>
+                    <p className="text-xl my-2">Welcome to Our Online Admission Portal</p>
 
-            {/* Last Name Input */}
-            <input type="text" placeholder="Last Name"
-              value={lastName} onChange={e => setLastName(e.target.value)} />
-          </div>
+                    {/* FullName, Email and Password Sections */}
+                    <label htmlFor="fullName" className='px-1 py-2 text-lg '>FullName</label>
+                    <input
+                        id="fullName"
+                        name="fullName"
+                        type="text"
+                        autoComplete=''
+                        required
+                        className="appearance-none rounded-none relative block px-3 py-3 border  bg-gray-50 border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none mb-3 focus:ring-black-500 focus:border-black-500 focus:z-10 sm:text-sm"
+                        placeholder="Nathan Ansong"
+                        value={fullName}
+                        onChange={(e) => setFullName(e.target.value)}
+                    />
 
-          {/* Email Input */}
-          <input type="email" placeholder="username@domain.com"
-            value={email} onChange={e => setEmail(e.target.value)} />
+                    <label htmlFor="email" className='px-1 py-2 text-lg '>Email</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        autoComplete='email'
+                        required
+                        className="appearance-none rounded-none relative block px-3 py-3 border  bg-gray-50 border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none mb-3 focus:ring-black-500 focus:border-black-500 focus:z-10 sm:text-sm"
+                        placeholder="Enter Email Address"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
+                    {/* <br /> */}
 
-          {/* Date of Birth */}
-          <input type="date" value={date_of_birth} onChange={e => setDateOfBirth(e.target.value)} style={{
-            color: 'gray'
-          }}/>
+                    {/* Password Section */}
+                    <label htmlFor="password" className='px-1 py-2 text-lg'>Password</label>
+                    <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        autoComplete="password"
+                        required
+                        className="appearance-none rounded-none relative block px-3 py-3 border  bg-gray-50 border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none mb-3 focus:ring-black-500 focus:border-black-500 focus:z-10 sm:text-sm"
+                        placeholder="Enter Password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
 
-          {/*Gender Input */}
-          <input type="text" placeholder="Gender"
-            value={gender} onChange={e => setGender(e.target.value)} />
+                    {/* Confirm Password
+                    <label htmlFor="confirm-password" className='px-1 py-2 text-lg'>Confirm Password</label>
+                    <input
+                        id="confirm-password"
+                        name="confirm-password"
+                        type="confirm-password"
+                        autoComplete="password"
+                        required
+                        className="appearance-none rounded-none relative block px-3 py-3 border  bg-gray-50 border-gray-300 placeholder-gray-500 text-gray-900 rounded-lg focus:outline-none mb-3 focus:ring-black-500 focus:border-black-500 focus:z-10 sm:text-sm"
+                        placeholder="Confirm Password"
+                        value={confirmPassword}
+                        onChange={(e) => setConfirmPassword(e.target.value)}
+                    /> */}
 
-          {/* Address Input */}
-          <input type="text" placeholder="Residential Address"
-            value={address} onChange={e => setAddress(e.target.value)} />
+                    
 
+                    {/* Submit Button */}
 
-          {/* Telephone Input */}
-          <input type="text" placeholder="+233 (0)"
-            value={telephone} onChange={e => setTelephone(e.target.value)} />
+                    <div className="btn justify-center mt-3 w-full">
+                        <button to={'#'}
+                            type='submit'
+                            disabled={loading}
+                            className="bg-black text-white py-3 px-5 flex gap-2 after:w-full z-[2] after:absolute relative after:h-full  after:left-0 after:top-0 after:-z-[1] hover:after:opacity-0 after:opacity-100  after:scale-75 hover:after:scale-150 after:transition-all after:duration-700  flex items-center gap-1 px-4  p-2 h-12 rounded-sm group justify-center after:bg-black w-full rounded-lg justify-center w-full">
+                            {loading ? "Loading..." : "Register"}
+                            {
+                                loading && <span className="spinner-border border-white-500 spinner-border-sm" role="status" aria-hidden="true"></span>
+                            }
+                        </button>
+                    </div>
 
+                    {/* Sign Up Link */}
+                    <p className="justify-start -mt-4 align-start">Already have an account? <Link
+                        to={'/login'}
+                        className='underline font-semibold'>Login</Link> </p>
+                </form>
+            </div>
 
-          {/* Password Input */}
-          <input type="password" placeholder="Enter Password"
-            value={password} onChange={e => setPassword(e.target.value)} />
-
-          {/* Button */}
-          <button className="primary signup-btn">
-            {loading ? "Loading..." : "Register"}
-            {
-              loading && <span className="spinner-border border-white-500 spinner-border-sm" role="status" aria-hidden="true"></span>
-            }
-          </button>
-        </form>
-
-        {/* Sign Up Link */}
-        <div className="text-center py-2 text-gray-500 -mt-6">
-          <p>Already have an account?            <Link to="/login" className="text-white underline">Login</Link>
-          </p>
+            {/* Image Advertisement Section */}
+            <div className="w-full login-img-ads hidden md:flex  max-w-lg  h-[70vh] relative  flex-col justify-end top-0 left-0 after:h-full after:absolute after:w-full after:bg-gradient-to-b  after:from-transparent after:via-transparent after:to-black hover:scale-[1.06] hover:z-[2]  hover:backdrop-blur-lg transition-all hover:outline hover:outline-2 hover:outline-offset-8 outline-black rounded-3xl overflow-hidden">
+                <img
+                    width={'1410'}
+                    height={'1058'}
+                    src={SignUpBg}
+                    className='w-full  object-cover h-full absolute'></img>
+                <h3 className="z-[1] text-white px-6 py-2 lg:text-lg font-sora">“ We appreciate the school's emphasis on diversity, equity, and inclusion. Our daughter has been exposed to a wide range of cultures and perspectives. ”</h3>
+                <h4 className="z-[1] text-white px-6 pb-5 text-sm font-sora">Mr. Nathan Offei Ansah, Parent</h4>
+            </div>
         </div>
-      </div>
-    </div>
-  )
-}
+    );
+};
 
-export default AdmissionPage
+export default AdmissionPage;

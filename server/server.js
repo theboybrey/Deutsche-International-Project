@@ -19,7 +19,7 @@ app.use(express.json())
 // CORS For the Server Communication to the Client
 app.use(cors({
     credentials: true,
-    origin: 'http://127.0.0.1:5173/'
+    origin: '*'
 }))
 
 // Base URI for the API Documentation

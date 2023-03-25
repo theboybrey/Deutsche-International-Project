@@ -1,10 +1,95 @@
-.login-btn{
-    background: black !important;
+.login-btn {
+  background: black !important;
 }
 
-.logo-header{
-    display: flex !important;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+.logo-header {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sidebar-ul {
+  display: flex;
+  flex-direction: column !important;
+  /* align-items: right; */
+  justify-content: center !important;
+  /* padding: 5rem 5px !important; */
+}
+
+.register-section {
+  display: flex !important;
+  /* flex-direction: column; */
+}
+
+.admin-nav-link {
+  position: absolute;
+  left: 16.6%;
+  top: 10%;
+}
+
+.pending-section,
+.declined-section,
+.approved-section {
+  position: absolute;
+  top: 15%;
+  left: 18.6%;
+  height: 600px;
+  width: 80%;
+  /* background-color: aliceblue; */
+}
+
+.filter-section {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+}
+
+.user-pending-admission {
+  height: 70%;
+  width: 100%;
+}
+
+/* Password Recovery Format */
+/* button::after{
+    content: '';
+    background-color: black;
+    transform: scale(1.1);
+    transition: ease-in-out .35s;
+    fill-opacity: .8;
+} */
+
+.pass-recovery-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.pass-recovery-section h2 {
+  /* font-family: 'Inter'; */
+}
+
+.pass-recovery-section .email-input-section {
+  width: 410px;
+}
+
+.pass-recovery-section .email-input-section input {
+  border-radius: 8px;
+}
+
+
+/* Login Page */
+.login-img-ads{
+  display: flex;
+  align-self: center !important;
+  cursor: pointer;
+}
+
+
+.userLogin input{
+  width: 410px;
+  border-radius: 8px;
+}
+
+.userLogin input::placeholder{
+  font-size: 17px;
 }

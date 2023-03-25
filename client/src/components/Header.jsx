@@ -24,7 +24,7 @@ const Header = () => {
         <a href="" className="flex items-center gap-1">
 
           {/* Header Logo */}
-          <span className='font-bold text-xl'>deutsche international</span>
+          <span className='font-bold text-xl'>deutsche international school</span>
         </a>
 
         {/* Header Icon */}
