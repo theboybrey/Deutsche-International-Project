@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useContextReducer, useReducer } from 'react'
+import React, { createContext, useContext, useReducer } from 'react';
 
 export const StateContext = createContext(null);
 
@@ -10,6 +10,4 @@ export const StateProvider = ({
     </StateContext.Provider>
 );
 
-export const useStateValue = () => {
-    useContext(StateContext);
-}
+export const useStateValue = () => useContext(StateContext);
